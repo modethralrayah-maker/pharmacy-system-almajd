@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-wrapper">
+            <header class="header">
+                <h1>😂 Random Joke Generator</h1>
+                <p class="subtitle">Get a laugh with every click</p>
+            </header>
+
+            <div class="joke-display">
+                <div class="joke-content">
+                    <div id="jokeText" class="joke-text">
+                        Click "Get Joke" to start laughing! 🎭
+                    </div>
+                    <div id="jokeType" class="joke-type"></div>
+                </div>
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Loading joke...</p>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <button id="getJokeBtn" class="btn btn-primary">🎲 Get Joke</button>
+                <button id="shareBtn" class="btn btn-secondary">📤 Share Joke</button>
+                <button id="copyBtn" class="btn btn-secondary">📋 Copy</button>
+            </div>
+
+            <div class="filters-section">
+                <label>Joke Type:</label>
+                <div class="filter-group">
+                    <select id="jokeTypeFilter" class="filter-select">
+                        <option value="any">Any Type</option>
+                        <option value="general">General</option>
+                        <option value="programming">Programming</option>
+                        <option value="knock-knock">Knock-Knock</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <span id="jokeCount" class="stat">Jokes loaded: 0</span>
+                <span id="errorCount" class="stat">Errors: 0</span>
+            </div>
+
+            <div id="notification" class="notification hidden"></div>
+
+            <div class="joke-history">
+                <h3>📚 Recent Jokes</h3>
+                <div id="historyList" class="history-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
